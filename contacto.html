@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cinerama - Noticias</title>
+    <title>Cinerama - Contacto</title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sh384-50o8UHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvF" crossorigin="anonymous"> 
 <script src="https://kit.fontawesome.com/e36898143e.js" crossorigin="anonymous"></script>
 <!-- CSS -->
     <link rel="stylesheet" href="css/styles-form.css">
-<!-- BOTON SUBIR -->  
-    <div class="goup">
-    </div>
 </head>
 
 <body>
@@ -32,26 +30,29 @@
           </nav>
           </div>
       </header>
-
-      <main class="content">
-        
-        <article class="article">
-          <div id="contenedor">
-              <form id="form" action="" class="form">
+      
+      
+      
+    <main class="content">
+      <section class="contact">
+        <div class="u-wrapper">
+          <div class="contact-content">
+    
+            <form id="form" action="" class="form">
               <h3 class="tag"><span>Contáctenos</span></h3>
               <label for="name">Nombre Completo <span>*</span></label>
               <input name="name" required type="text" id="name" placeholder="Juan">
               <label for="email">Correo electrónico <span>*</span></label>
-              <input name="email" type="text" id="email" required placeholder="xy@gmail.com">
-              <label for="message">Mensaje <span>*</span></label>
-              <textarea id="message" name="message" id="message" required cols="30" rows="10"></textarea>
+              <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+              <label for="message">Mensaje<span>*</span></label>
+              <textarea id="message" name="message" required cols="30" rows="10"></textarea>
               <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
             </form>
-            <a href="mailto:dgctes@gmail.com" id="correo"></a>
-            
+            <a href="mailto:dgctesgmail.com" id="enviaremail"></a>
           </div>
-
-        </article>
+        </div>
+      </section>
+        
 
     </main>
 
@@ -73,25 +74,15 @@
   
     <footer class="footer">
       <div class="redes">
-          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" alt="Instagram"></i></a>
-          <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter-square"alt="Twitter"></i></a>
-          <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"alt="Facebook"></i></a>
+      <ul>
+          <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"  alt="Instagram"></i></a></li>
+          <li><a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter" alt="Twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" alt="Facebook"></i></a></li>
+      </ul>
       </div>
-    </footer>
-
+  </footer>
+  <script src="js/cinerama.js"></script>
   </div>      
-  <script>
-    const $form = document.querySelector('#form')
-    const $buttonMailto = document.querySelector('#correo')
-
-    $form.addEventListener('submit', handleSubmit)
-
-    function handleSubmit(event) {
-      event.preventDefault()
-      const form = new FormData(this)
-      $buttonMailto.setAttribute('href', `mailto:dgctes@gmail.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
-      $buttonMailto.click()
-    }
-  </script>
+  
 </body>
 </html>
